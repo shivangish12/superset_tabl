@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: superset
+    env: docker
+    repo: https://github.com/shivangish12/superset
+    branch: master
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: SUPERSET_SECRET_KEY
+        value: l9-v5cPW1ctAaCPYkgSNdSsycM7QlLNOycrrhvobsh4
+
+      - key: PYTHONPATH
+        value: "/app/pythonpath"
+      - key: SUPERSET_CONFIG_PATH
+        value: /app/superset_config.py
